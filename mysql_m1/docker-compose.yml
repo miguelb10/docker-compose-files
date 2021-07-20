@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: tyb
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+    - ./data:/var/lib/mysql
